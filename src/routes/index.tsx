@@ -135,7 +135,7 @@ function Home() {
         {/* HERO */}
         <section className="grid items-center gap-10 pb-12 pt-6 lg:grid-cols-2 lg:pt-10">
           <div>
-            <h1 className="text-4xl font-medium leading-[1.1] sm:text-6xl">Instructaj la locul de muncă și electrosecuritate</h1>
+            <h1 className="text-4xl font-medium leading-[1.1] sm:text-6xl">Instructajul la locul de muncă și electrosecuritatea</h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed sm:text-xl">
               În acest studiu vom prezenta pe înțeles ce trebuie să știe un elev înainte să se așeze la calculator și de ce unele încăperi din colegiu și din cămin sunt mai periculoase decât altele.
             </p>

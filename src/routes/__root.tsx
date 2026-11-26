@@ -11,7 +11,7 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: APP_NAME },
-      { name: "description", content: "Instructaj la locul de muncă și electrosecuritate — studiu individual SSM, CEITI" },
+      { name: "description", content: "Instructajul la locul de muncă și electrosecuritatea — studiu individual SSM, CEITI" },
       { name: "theme-color", content: "#0a355c" },
     ],
     links: [
