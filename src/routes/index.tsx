@@ -6,50 +6,51 @@ export const Route = createFileRoute("/")({ component: Home });
 
 const NAV = [
   ["#instructaj", "Instructaj"],
-  ["#electrosecuritate", "Electrosecuritate"],
+  ["#electrosecuritate", "Siguranța electrică"],
   ["#incaperi", "Încăperi"],
 ];
 
 /* Texte oficiale pe legis.md */
 const LAW_186 = "https://www.legis.md/cautare/getResults?doc_id=142427&lang=ro";
 const LAW_267 = "https://www.legis.md/cautare/getResults?doc_id=147578&lang=ro";
+const FIRST_AID = "https://www.electricalsafetyfirst.org.uk/safety-advice/home-and-people/house-maintenance/first-aid/";
 
 const TEAM = ["Borș Bogdan", "Bruma Alexandrina", "Covali Alexandr", "Gațcan Cristian", "Mazur Adrian"];
 
 /* Partea 1 — cum facem instructajul */
 const STEPS = [
-  ["Explicarea riscurilor", "Profesorul verifică mai întâi aparatele. Apoi le spune elevilor ce îi poate răni la calculator: curentul electric, un cablu care se aprinde, ochii obosiți și spatele încordat."],
-  ["Regulile de lucru", "Calculatorul se pornește și se oprește doar de la buton, iar carcasa nu se deschide. Pe masă nu ținem apă sau mâncare, iar monitorul îl punem la o lungime de braț."],
-  ["Demonstrația practică", "Profesorul nu doar povestește, ci arată unde sunt stingătorul, trusa de prim ajutor și ieșirea. Tot atunci arată cum se închide corect calculatorul."],
-  ["Verificarea și semnătura", "La final, elevul răspunde la câteva întrebări. Dacă a înțeles, semnează fișa de instruire și abia din acel moment poate lucra singur."],
+  ["Explicarea riscurilor", "Profesorul verifică starea echipamentelor și le explică elevilor principalele riscuri: electrocutarea, incendiile, oboseala ochilor și durerile de spate."],
+  ["Regulile de lucru", "Calculatorul se pornește și se închide corect, iar carcasa nu se deschide fără permisiune. Nu ținem băuturi sau mâncare lângă echipamente și păstrăm monitorul la aproximativ o lungime de braț."],
+  ["Demonstrația practică", "Profesorul le arată elevilor unde se află stingătorul, trusa de prim ajutor și ieșirea de urgență. De asemenea, demonstrează cum se folosește și se închide corect calculatorul."],
+  ["Verificarea cunoștințelor", "La final, elevii răspund la câteva întrebări pentru a verifica dacă au înțeles regulile. Instruirea se notează în fișa de instruire, iar elevii respectă indicațiile profesorului."],
 ];
 
 const QUIZ = [
-  ["Ce faci dacă simți miros de plastic ars?", "Opresc calculatorul, mă dau la o parte și îi spun imediat profesorului."],
-  ["Ai voie să bei ceai sau cafea lângă tastatură?", "Nu, pentru că dacă se varsă, lichidul poate face scurtcircuit."],
-  ["Unde este stingătorul cel mai apropiat?", "Elevul trebuie să poată arăta exact unde se află, în sală sau pe hol."],
-  ["Poți deschide carcasa dacă calculatorul nu merge?", "Nu. Îi spun profesorului, iar reparația o face doar un specialist."],
-  ["La ce distanță stă monitorul de ochi?", "Cam la o lungime de braț, cu marginea de sus puțin sub nivelul ochilor."],
-  ["Unde lași ghiozdanul în laborator?", "Sub masă, ca să nu blocheze culoarul și să nu stea pe cabluri."],
+  ["Ce faci dacă simți miros de plastic ars?", "Nu mai folosesc calculatorul, mă îndepărtez și anunț imediat profesorul."],
+  ["Ai voie să bei ceai sau cafea lângă tastatură?", "Nu. Lichidul vărsat poate strica echipamentele sau provoca un scurtcircuit."],
+  ["Unde este stingătorul cel mai apropiat?", "Arăt locul în care se află stingătorul, în sală sau pe hol."],
+  ["Ai voie să deschizi carcasa unui calculator care nu funcționează?", "Nu. Anunț profesorul, iar reparația este efectuată de o persoană calificată."],
+  ["La ce distanță trebuie să fie monitorul față de ochi?", "La aproximativ o lungime de braț, cu marginea de sus a ecranului la nivelul ochilor sau puțin mai jos."],
+  ["Unde lași ghiozdanul în laborator?", "În locul indicat de profesor, fără să blochez trecerea sau să ating cablurile."],
 ];
 
 /* Partea 2 — exemple de electrosecuritate */
 const SITUATIONS = [
-  ["Cablul monitorului e tăiat", "Nu mai folosești calculatorul acela și îi spui profesorului, ca să schimbe cablul."],
-  ["S-a vărsat apă pe masă", "Nu atingi aparatele ude. Profesorul scoate mai întâi totul din priză și abia apoi se șterge masa."],
-  ["Un coleg e prins de curent", "Nu-l apuci cu mâna, pentru că te curentează și pe tine. Mai întâi se oprește curentul de la tablou, apoi se acordă primul ajutor și se sună la 112."],
-  ["Prelungitorul s-a încălzit tare", "Scoți din priză aparatele legate la el și îi spui profesorului. Dacă se încălzește, înseamnă că e prea încărcat."],
-  ["Vezi scântei la priză", "Nu mai bagi nimic în priza aceea, te dai la o parte și anunți imediat profesorul."],
-  ["Calculatorul te „ciupește” când îl atingi", "Nu-l mai atingi și îi spui profesorului. Înseamnă că aparatul are o defecțiune și curentul ajunge pe carcasă."],
+  ["Cablul monitorului este deteriorat", "Nu mai folosesc calculatorul și anunț profesorul. Nu ating firele la vedere."],
+  ["S-a vărsat apă pe masă", "Nu ating aparatele, cablurile sau prizele ude. Anunț profesorul, iar alimentarea cu energie trebuie oprită în siguranță înainte de curățare."],
+  ["Un coleg suferă un accident electric", "Nu îl ating cât timp este în contact cu sursa de curent. Anunț profesorul și sun la 112. Curentul trebuie oprit în siguranță înainte de acordarea primului ajutor. Urmez indicațiile operatorului 112."],
+  ["Prelungitorul s-a încălzit foarte tare", "Nu îl mai folosesc și anunț profesorul. Încălzirea poate indica prea multe aparate conectate sau o defecțiune."],
+  ["Vezi scântei la priză", "Nu ating priza și nu conectez alte aparate. Mă îndepărtez și anunț imediat profesorul."],
+  ["Simt un șoc electric când ating calculatorul", "Nu mai ating calculatorul și anunț imediat profesorul. Poate exista o problemă electrică sau o defecțiune a protecției."],
 ];
 
 const ELECTRO_PHOTOS = [
-  ["/priza.jpg", "Priză cu un cablu deteriorat", "Cablul are izolația ruptă și firele la vedere, așa că nu se mai folosește."],
-  ["/prize-impamantare.jpg", "Prize cu contact de împământare", "Contactul metalic din priză duce curentul în pământ dacă aparatul se strică."],
-  ["/triplu.jpg", "Triplu-ștecher", "Dacă bagi prea multe aparate într-un triplu, se încălzește și poate lua foc."],
-  ["/cabluri-incurcate.jpg", "Birou cu multe cabluri încurcate", "Cablurile încurcate se agață ușor și nu observi la timp dacă unul s-a rupt."],
-  ["/disjunctor.jpg", "Disjunctor diferențial", "Disjunctorul diferențial oprește curentul imediat ce acesta trece prin om."],
-  ["/tablou.jpg", "Tablou electric cu disjunctoare", "La tabloul electric umblă doar electricianul, niciodată elevii."],
+  ["/priza.jpg", "Cablu electric deteriorat lângă priză", "Cablurile cu firele la vedere nu trebuie folosite."],
+  ["/prize-impamantare.jpg", "Prize cu contact de împământare", "Contactul de împământare al prizei contribuie la protecția împotriva electrocutării."],
+  ["/triplu.jpg", "Adaptor cu mai multe prize", "Conectarea prea multor aparate la un prelungitor poate provoca supraîncălzire și incendii."],
+  ["/cabluri-incurcate.jpg", "Birou cu multe cabluri încurcate", "Cablurile trebuie aranjate astfel încât să nu împiedice trecerea și să poată fi verificate ușor."],
+  ["/disjunctor.jpg", "Întrerupător de protecție împotriva pierderilor de curent", "Întrerupătorul de protecție poate opri automat curentul când detectează o pierdere de curent."],
+  ["/tablou.jpg", "Panou electric cu întrerupătoare de protecție", "Doar personalul autorizat poate interveni la panoul electric."],
 ];
 
 /* Partea 3 — categorii și exemple */
@@ -57,34 +58,34 @@ const ROOMS = [
   {
     bg: "bg-safe",
     level: 1,
-    label: "Fără pericol major",
-    danger: "Aerul e uscat, podeaua e din lemn sau linoleum, iar temperatura e obișnuită.",
-    protect: "Ajung prizele cu împământare și un stingător aproape.",
+    label: "Fără pericol sporit (risc redus)",
+    danger: "Nu există factori care să mărească riscul de electrocutare, precum umezeala ridicată sau podelele care conduc curentul.",
+    protect: "Folosim echipamente în stare bună și respectăm regulile de siguranță electrică și de prevenire a incendiilor.",
   },
   {
     bg: "bg-warn",
     level: 2,
-    label: "Cu pericol majorat",
-    danger: "Apare o singură problemă: umezeală, căldură mare, praf sau o podea de beton ori gresie.",
-    protect: "Disjunctorul diferențial devine obligatoriu, iar prelungitoarele nu stau pe jos.",
+    label: "Cu pericol sporit (risc mai mare)",
+    danger: "Există un factor de risc, cum ar fi umezeala, mult praf, căldura ridicată sau o podea care poate conduce curentul, de exemplu din metal ori beton armat.",
+    protect: "Se folosesc echipamente și protecții electrice potrivite încăperii. Cablurile și aparatele sunt ferite de apă.",
   },
   {
     bg: "bg-danger",
     level: 3,
-    label: "Foarte periculoase",
-    danger: "Apa e peste tot, se folosesc substanțe chimice sau apar două probleme în același timp.",
-    protect: "Lângă apă nu se folosește niciun aparat din priză, iar în încăperile tehnice intră doar personalul.",
+    label: "Deosebit de periculoase (risc foarte mare)",
+    danger: "Umezeala este foarte ridicată, există substanțe care pot deteriora echipamentele electrice sau sunt prezenți mai mulți factori de risc în același timp.",
+    protect: "Se folosesc numai aparate și instalații potrivite acestor condiții. Accesul în încăperile tehnice este permis doar personalului autorizat.",
   },
 ];
 
-const EXAMPLES: [string, string, 0 | 1 | 2, string, string][] = [
-  ["Colegiu", "Sală de clasă", 0, "E uscată și are podea de linoleum.", "/sala-clasa.jpg"],
-  ["Colegiu", "Laborator de informatică", 0, "E uscat, dar are multe cabluri și prize, așa că fiecare cablu trebuie verificat.", "/lab.jpg"],
-  ["Colegiu", "Atelier, subsol", 1, "Podeaua e de beton, se adună praf și uneori e umed.", "/subsol.jpg"],
-  ["Colegiu", "Tablou electric, centrală termică", 2, "E tensiune mare și căldură, așa că intră doar personalul.", "/tablou.jpg"],
-  ["Cămin", "Camera de locuit", 0, "E uscată, dar sunt multe încărcătoare și prelungitoare.", "/camera-camin.jpg"],
-  ["Cămin", "Bucătăria comună", 1, "Chiuveta e chiar lângă prize, iar țevile sunt din metal.", "/camin.jpg"],
-  ["Cămin", "Dușurile și spălătoria", 2, "Aerul e aproape tot timpul umed și pe jos e apă.", "/dus.jpg"],
+const EXAMPLES = [
+  { place: "Colegiu", room: "Sală de clasă", lvl: 0 as const, tag: "De regulă, fără pericol sporit", why: "Dacă sala este uscată și nu prezintă alți factori de risc, riscul de electrocutare este mai redus.", src: "/sala-clasa.jpg" },
+  { place: "Colegiu", room: "Laborator de informatică", lvl: 0 as const, tag: "De regulă, fără pericol sporit", why: "Într-un laborator uscat, folosirea mai multor calculatoare nu înseamnă automat un risc electric sporit. Cablurile și prizele trebuie să fie în stare bună.", src: "/lab.jpg" },
+  { place: "Colegiu", room: "Atelier sau subsol", lvl: 1 as const, tag: "Posibil pericol sporit", why: "Umezeala, praful și anumite tipuri de podea pot mări riscul de electrocutare. Mai mulți factori pot impune o categorie superioară.", src: "/subsol.jpg" },
+  { place: "Colegiu", room: "Încăperi tehnice", lvl: 2 as const, tag: "Acces restricționat", why: "Aici se află echipamente care pot prezenta riscuri electrice sau termice. Categoria depinde de condițiile reale, iar accesul este rezervat personalului autorizat.", src: "/tablou.jpg" },
+  { place: "Cămin", room: "Cameră de locuit", lvl: 0 as const, tag: "De regulă, fără pericol sporit", why: "Într-o cameră uscată, riscul electric este mai redus, însă încărcătoarele și prelungitoarele trebuie folosite corect.", src: "/camera-camin.jpg" },
+  { place: "Cămin", room: "Bucătărie comună", lvl: 1 as const, tag: "Posibil pericol sporit", why: "Apa, aburul și aparatele electrice pot crește riscul de accidente. Categoria exactă depinde de condițiile din încăpere.", src: "/camin.jpg" },
+  { place: "Cămin", room: "Dușuri și spălătorie", lvl: 2 as const, tag: "Posibil pericol sporit sau foarte mare", why: "Apa și umezeala ridicată cresc riscul de electrocutare. Categoria exactă depinde de condițiile din încăpere și de instalația electrică.", src: "/dus.jpg" },
 ];
 
 function Home() {
@@ -97,7 +98,7 @@ function Home() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-8 lg:py-6">
           <a href="#top" className="flex items-center gap-3 sm:gap-4">
             <img src="/ceiti-logo.png" alt="CEITI" className="h-7 w-auto sm:h-9" />
-            <span className="border-l border-dark/20 pl-3 text-base font-semibold leading-tight tracking-tight sm:pl-4 sm:text-xl">Securitatea Muncii</span>
+            <span className="border-l border-dark/20 pl-3 text-base font-semibold leading-tight tracking-tight sm:pl-4 sm:text-xl">Securitatea în muncă</span>
           </a>
           <nav className="hidden items-center gap-8 lg:flex">
             {NAV.map(([href, label]) => (
@@ -135,16 +136,16 @@ function Home() {
         {/* HERO */}
         <section className="grid items-center gap-10 pb-12 pt-6 lg:grid-cols-2 lg:pt-10">
           <div>
-            <h1 className="text-4xl font-medium leading-[1.1] sm:text-6xl">Instructajul la locul de muncă și electrosecuritatea</h1>
+            <h1 className="text-4xl font-medium leading-[1.1] sm:text-6xl">Instructajul la locul de muncă și siguranța electrică</h1>
             <p className="mt-6 max-w-lg text-lg leading-relaxed sm:text-xl">
-              În acest studiu vom prezenta pe înțeles ce trebuie să știe un elev înainte să se așeze la calculator și de ce unele încăperi din colegiu și din cămin sunt mai periculoase decât altele.
+              În acest studiu prezentăm regulile de siguranță pe care elevii trebuie să le respecte în laboratorul de informatică. De asemenea, explicăm ce pericole pot apărea în diferite încăperi ale colegiului și ale căminului.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
               <a href="#instructaj" className="inline-flex items-center gap-2 rounded-2xl bg-dark px-8 py-4 text-lg text-white transition-colors hover:bg-black">
                 Începe <ArrowUpRight className="h-5 w-5 text-brand" />
               </a>
               <div className="leading-snug">
-                <p className="text-lg font-semibold">Studiul Individual</p>
+                <p className="text-lg font-semibold">Studiu individual</p>
                 <p className="text-muted">Grupul 3 · P-2341</p>
               </div>
             </div>
@@ -176,13 +177,13 @@ function Home() {
           </h2>
           <div className="grid gap-8 md:grid-cols-3">
             <PartCard href="#instructaj" n="01" tone="gray" title="Instructajul la locul de muncă">
-              Ce află elevul de la profesor înainte să lucreze prima dată la calculator.
+              Ce reguli trebuie să cunoască elevii înainte de a lucra la calculator.
             </PartCard>
-            <PartCard href="#electrosecuritate" n="02" tone="brand" title="Asigurarea electrosecurității">
-              Cum ne ferim de curentul electric și de incendiile pornite de la aparate.
+            <PartCard href="#electrosecuritate" n="02" tone="brand" title="Siguranța electrică">
+              Cum prevenim accidentele și incendiile cauzate de aparatele electrice.
             </PartCard>
             <PartCard href="#incaperi" n="03" tone="dark" title="Compararea încăperilor">
-              De ce o sală de clasă și un duș din cămin nu sunt la fel de periculoase.
+              De ce unele încăperi prezintă un risc mai mare de electrocutare decât altele.
             </PartCard>
           </div>
         </section>
@@ -193,12 +194,12 @@ function Home() {
             <div className="grid overflow-hidden rounded-[2rem] bg-gray md:grid-cols-2 md:rounded-[2.8rem]">
               <div className="p-8 sm:p-12">
                 <p className="text-xl leading-relaxed sm:text-2xl">
-                  Este discuția în care profesorul îi explică elevului <b className="tag bg-brand font-medium">ce îl poate răni</b> la locul lui de lucru și cum să evite asta.
+                  Instructajul este o activitate în care profesorul le explică elevilor <b className="tag bg-brand font-medium">regulile de siguranță</b>, riscurile din laborator și modul în care pot preveni accidentele.
                 </p>
                 <ul className="mt-8 space-y-4 text-lg">
-                  <Li>Are loc după instruirea introductiv-generală, unde se vorbește despre regulile valabile în tot colegiul.</Li>
-                  <Li>Îl ține profesorul care conduce ora în laborator, pentru că el cunoaște cel mai bine sala și aparatele.</Li>
-                  <Li>Se repetă când apare un calculator nou, când elevul trece la alt loc de lucru sau după un accident.</Li>
+                  <Li>Are loc după instruirea generală, în care sunt prezentate regulile de siguranță din colegiu.</Li>
+                  <Li>Este realizat de profesorul responsabil de laborator.</Li>
+                  <Li>Regulile sunt explicate din nou atunci când se schimbă locul de lucru, se introduc echipamente noi sau este necesară o instruire suplimentară.</Li>
                 </ul>
               </div>
               <Slideshow
@@ -218,7 +219,7 @@ function Home() {
             <LawQuote
               source="Legea nr. 186/2008, art. 17 alin. (1)"
               href={LAW_186}
-              plain="Legea obligă instituția să-l instruiască pe fiecare om înainte să înceapă lucrul și din nou de fiecare dată când se schimbă locul de lucru sau aparatele."
+              plain="Angajatorul trebuie să le explice lucrătorilor regulile de siguranță înainte de a începe activitatea și atunci când se schimbă locul de muncă sau echipamentele folosite."
             >
               <p>„Angajatorul trebuie să asigure condiţii pentru ca fiecare lucrător [...] să primească o instruire suficientă, adecvată, teoretică şi practică în domeniul securităţii şi sănătăţii în muncă [...]:</p>
               <p>a) la angajare, care include instruirea introductiv-generală şi instruirea la locul de muncă;</p>
@@ -227,7 +228,7 @@ function Home() {
             </LawQuote>
           </Block>
 
-          <Block label="Cum facem">
+          <Block label="Cum se desfășoară instructajul">
             <ol className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {STEPS.map(([t, d], i) => (
                 <li key={t} className={`pop flex flex-col p-6 ${i === 3 ? "bg-brand" : "bg-gray"}`}>
@@ -258,21 +259,21 @@ function Home() {
         </Section>
 
         {/* ───────── PARTEA 2 ───────── */}
-        <Section id="electrosecuritate" part="Partea 2" title="Asigurarea electrosecurității">
+        <Section id="electrosecuritate" part="Partea 2" title="Siguranța electrică (electrosecuritatea)">
           <Block label="Ce este">
             <div className="grid rounded-[2rem] bg-dark p-8 text-white sm:p-12 md:grid-cols-2 md:divide-x md:divide-white/30 md:rounded-[2.8rem]">
               <div className="pb-8 md:pb-0 md:pr-10">
                 <p className="text-xl leading-relaxed sm:text-2xl">
-                  Înseamnă tot ce facem ca <span className="tag bg-brand text-dark">să nu ne curenteze</span> și ca niciun aparat electric să nu ia foc.
+                  Siguranța electrică cuprinde regulile și măsurile care ne protejează de <span className="tag bg-brand text-dark">accidente</span> și de incendiile cauzate de curentul electric.
                 </p>
               </div>
               <ElectroList
-                title="Ce se poate întâmpla"
+                title="Principalele pericole"
                 items={[
-                  "Curentul trece prin corp și te electrocutează.",
-                  "Pielea se arde în locul unde ai atins firul.",
-                  "Mușchii mâinii se strâng și nu mai poți da drumul firului.",
-                  "Un scurtcircuit poate aprinde cablul și apoi lucrurile din jur.",
+                  "Curentul electric poate trece prin corp și poate provoca răni grave.",
+                  "Contactul cu un fir electric neprotejat poate provoca arsuri.",
+                  "Curentul electric poate face ca mușchii să se contracte, astfel încât persoana să nu mai poată elibera firul.",
+                  "Un scurtcircuit apare atunci când curentul trece pe o cale neprevăzută, cu rezistență foarte mică. Acesta poate încălzi cablurile și provoca un incendiu.",
                 ]}
                 className="border-t border-white/30 pt-8 md:border-t-0 md:pl-10 md:pt-0"
               />
@@ -283,20 +284,20 @@ function Home() {
             <LawQuote
               source="Legea nr. 186/2008, art. 19 alin. (2) lit. d)"
               href={LAW_186}
-              plain="Dacă vezi ceva periculos, de exemplu un cablu rupt sau o priză care scânteiază, ești obligat să spui imediat. Nu e pârâre, e ceea ce cere legea."
+              plain="Dacă observăm un cablu deteriorat, o priză care scoate scântei sau alt pericol, trebuie să anunțăm imediat persoana responsabilă. În laborator, elevii anunță profesorul."
             >
               <p>„Lucrătorii sînt obligaţi: [...]</p>
               <p>d) să comunice imediat angajatorului şi/sau lucrătorilor desemnaţi orice situaţie de muncă pe care au motive întemeiate să o considere un pericol grav pentru securitate şi sănătate, precum şi orice defecţiuni ale sistemelor de protecţie;”</p>
             </LawQuote>
           </Block>
 
-          <Block label="Cum facem">
+          <Block label="Reguli de siguranță electrică">
             <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
               {[
-                ["Cabluri întregi", "Ne uităm la cablu înainte să-l folosim. Dacă are fisuri sau i se văd firele, nu-l mai băgăm în priză."],
-                ["Priza cu împământare", "Are un contact metalic în plus. Dacă aparatul se strică, curentul pleacă prin acest contact în pământ, nu prin mâna ta."],
-                ["Disjunctorul diferențial", "Este un întrerupător din tabloul electric. Când observă că o parte din curent trece prin om, oprește totul într-o fracțiune de secundă."],
-                ["Grija noastră", "Atingem aparatele doar cu mâinile uscate, nu legăm prelungitoare unul în altul și nu umblăm niciodată la tabloul electric."],
+                ["Verificarea cablurilor", "Verificăm cablurile înainte de utilizare. Dacă sunt rupte sau au firele la vedere, nu le folosim și anunțăm profesorul."],
+                ["Prizele cu protecție (împământare)", "O priză cu împământare are un contact metalic de protecție. Dacă un aparat se defectează, acest contact ajută la trecerea curentului pe o cale de protecție și la oprirea automată a alimentării, reducând riscul de electrocutare."],
+                ["Întrerupătorul de protecție", "Este un dispozitiv din panoul electric care detectează dacă o parte din curent ajunge unde nu ar trebui, de exemplu prin corpul unei persoane. În acest caz, poate opri automat alimentarea cu energie. Acest tip de protecție se numește protecție diferențială."],
+                ["Folosirea corectă a aparatelor", "Folosim aparatele electrice cu mâinile uscate, nu conectăm prelungitoare unul la altul și nu intervenim la panoul electric."],
               ].map(([t, d], i) => (
                 <article key={t} className={`pop flex flex-col p-7 ${i === 1 ? "bg-brand" : "bg-gray"}`}>
                   <span className="text-4xl font-medium">0{i + 1}</span>
@@ -337,9 +338,9 @@ function Home() {
 
         {/* ───────── PARTEA 3 ───────── */}
         <Section id="incaperi" part="Partea 3" title="Compararea încăperilor">
-          <Block label="Ce este">
+          <Block label="Cum se clasifică încăperile">
             <p className="max-w-3xl text-xl leading-relaxed sm:text-2xl">
-              Nu toate încăperile sunt la fel de periculoase. După cât de ușor te poate curenta și cât de repede poate izbucni un incendiu, le împărțim în <span className="tag bg-brand">trei categorii</span>.
+              Riscul de electrocutare diferă de la o încăpere la alta. Umezeala, temperaturile ridicate și alte condiții pot crește acest risc. Încăperile se împart în <span className="tag bg-brand">trei categorii</span>.
             </p>
             <div className="mt-8 grid gap-8 md:grid-cols-3">
               {ROOMS.map((r) => (
@@ -351,8 +352,8 @@ function Home() {
                     <Dots level={r.level} />
                   </div>
                   <dl className="mt-6 space-y-5">
-                    <RoomRow k="De ce e periculoasă" v={r.danger} />
-                    <RoomRow k="Ce măsuri luăm" v={r.protect} />
+                    <RoomRow k="Condiții" v={r.danger} />
+                    <RoomRow k="Măsuri" v={r.protect} />
                   </dl>
                 </article>
               ))}
@@ -364,29 +365,29 @@ function Home() {
               <LawQuote
                 source="Legea nr. 267/1994, art. 13"
                 href={LAW_267}
-                plain="Colegiul e obligat prin lege să ne învețe regulile de apărare împotriva incendiilor și ce facem dacă izbucnește un foc."
+                plain="Colegiul trebuie să îi învețe pe elevi cum să prevină incendiile și cum să acționeze în cazul unui incendiu."
               >
                 <p>„În instituţiile de învățământ de toate treptele trebuie să fie organizată însuşirea reglementărilor de apărare împotriva incendiilor, instruirea privind modul de intervenţie la incendiu, conform unor programe speciale.”</p>
               </LawQuote>
               <LawQuote
                 source="Legea nr. 267/1994, art. 12 alin. (1)"
                 href={LAW_267}
-                plain="Regulile contra incendiilor le respectăm nu doar la colegiu, ci și acasă sau în cămin. Dacă vedem foc, anunțăm imediat și, dacă se poate, îl stingem cât e mic."
+                plain="Regulile de prevenire a incendiilor trebuie respectate la locul de muncă și acasă. Dacă observăm un incendiu, anunțăm imediat serviciile de urgență la 112. Încercăm să îl stingem doar dacă știm cum și nu ne punem în pericol."
               >
                 <p>„Fiecare cetăţean este obligat să cunoască şi să îndeplinească reglementările de apărare împotriva incendiilor la locul de muncă şi la domiciliu, să acorde ajutorul posibil la prevenirea incendiilor, de asemenea să anunţe, prin orice mijloc, serviciile de urgenţă, primarul sau poliţia şi să ia măsuri, după posibilităţile sale, pentru limitarea răspândirii şi stingerea incendiului în faza iniţială.”</p>
               </LawQuote>
             </div>
           </Block>
 
-          <Block label="Cum facem">
-            <p className="mb-6 text-lg">Când vrei să afli din ce categorie face parte o încăpere, îți pui pe rând aceste întrebări:</p>
+          <Block label="Cum identificăm riscurile">
+            <p className="mb-6 text-lg">Pentru a înțelege ce riscuri există într-o încăpere, analizăm următoarele aspecte:</p>
             <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
               {[
-                ["Umezeala", "Este apă, abur sau condens pe pereți?"],
-                ["Podeaua", "E din lemn sau linoleum, ori din beton sau gresie?"],
-                ["Temperatura", "E o căldură obișnuită sau e foarte cald?"],
-                ["Praf și chimicale", "Se adună praf sau se lucrează cu substanțe chimice?"],
-                ["Ce poate arde", "Sunt multe hârtii, haine, ulei sau cabluri?"],
+                ["Umezeala", "Este aerul umed? Există apă sau picături de apă pe suprafețe?"],
+                ["Podeaua", "Este dintr-un material care poate conduce curentul electric, cum ar fi metalul sau betonul armat?"],
+                ["Temperatura", "Este temperatura ridicată pentru o perioadă îndelungată?"],
+                ["Praful și substanțele chimice", "Există mult praf sau substanțe care pot deteriora echipamentele electrice?"],
+                ["Suprafețele metalice", "Pot fi atinse în același timp un aparat electric și o structură metalică legată la pământ?"],
               ].map(([t, q], i) => (
                 <li key={t} className="rounded-[2rem] border border-dark p-6">
                   <span className="grid h-9 w-9 place-items-center rounded-full bg-dark text-sm font-semibold text-white">{i + 1}</span>
@@ -395,10 +396,10 @@ function Home() {
                 </li>
               ))}
             </ol>
-            <Callout label="Regula">Dacă nu găsești nicio problemă, încăperea e fără pericol major. Dacă găsești una, are pericol majorat. Dacă găsești două sau e apă peste tot, e foarte periculoasă.</Callout>
+            <Callout label="Regula">O încăpere fără factori de risc este încadrată în prima categorie. Un singur factor dintre cei specifici pericolului sporit poate duce la încadrarea în a doua categorie. Doi sau mai mulți asemenea factori, umezeala foarte ridicată sau un mediu care deteriorează instalațiile electrice pot duce la încadrarea în a treia categorie. Clasificarea exactă se face de specialiști. Riscul de incendiu se evaluează separat.</Callout>
           </Block>
 
-          <Block label="Exemple din CEITI și cămin">
+          <Block label="Exemple posibile din colegiu și cămin">
             <RoomSlider />
           </Block>
         </Section>
@@ -411,9 +412,9 @@ function Home() {
           <div className="rounded-[2rem] bg-dark p-8 text-white sm:p-12 md:rounded-[2.8rem]">
             <ol className="grid gap-6 md:grid-cols-3">
               {[
-                ["Instructajul", "Nimeni nu lucrează singur la calculator până nu a trecut prin instructaj și nu a semnat fișa."],
-                ["Electrosecuritatea", "Cele mai multe accidente se evită simplu: cablu întreg, mâini uscate și o priză cu împământare."],
-                ["Încăperile", "Cu cât e mai multă apă într-o încăpere, cu atât e mai periculoasă și cu atât trebuie să fim mai atenți."],
+                ["Instructajul", "Instructajul îi ajută pe elevi să cunoască regulile de siguranță înainte de a lucra la calculator și să știe cum să reacționeze în caz de pericol."],
+                ["Siguranța electrică", "Verificarea cablurilor, folosirea corectă a aparatelor și protecțiile electrice contribuie la prevenirea accidentelor."],
+                ["Încăperile", "Fiecare încăpere poate prezenta riscuri diferite. Măsurile de siguranță trebuie adaptate condițiilor din încăperea respectivă."],
               ].map(([t, d], i) => (
                 <li key={t} className="rounded-[2rem] border border-brand p-6">
                   <span className="text-3xl font-medium text-brand">0{i + 1}</span>
@@ -435,12 +436,14 @@ function Home() {
             ]}
           />
           <div className="pop mt-8 bg-white p-8 sm:p-10">
-            <h3 className="text-2xl font-medium">Sursele care ne-au ajutat la crearea studiului</h3>
-            <ul className="mt-6 grid gap-4 md:grid-cols-3">
+            <h3 className="text-2xl font-medium">Surse utilizate</h3>
+            <ul className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {[
                 ["Legea nr. 186/2008 privind securitatea și sănătatea în muncă.", LAW_186],
                 ["Legea nr. 267/1994 privind apărarea împotriva incendiilor.", LAW_267],
-                ["Materialele de curs SSM despre instruire și modelul de instructaj la locul de muncă.", ""],
+                ["Materialele de curs privind securitatea și sănătatea în muncă și instruirea la locul de muncă.", ""],
+                ["ANRE, Normativul privind amenajarea instalațiilor electrice, Hotărârea nr. 783 din 16.12.2025, pct. 7–8.", ""],
+                ["Electrical Safety First — First aid tips.", FIRST_AID],
               ].map(([s, href]) => (
                 <li key={s} className="text-lg">
                   {href ? (
@@ -501,7 +504,7 @@ function PartCard({ href, n, tone, title, children }: { href: string; n: string;
       </h3>
       <p className="mt-4 flex-1 text-lg leading-relaxed">{children}</p>
       <span className="mt-6 inline-flex items-center gap-2 text-lg font-medium">
-        Vezi partea <ArrowUpRight className="h-5 w-5" />
+        Vezi secțiunea <ArrowUpRight className="h-5 w-5" />
       </span>
     </a>
   );
@@ -540,7 +543,7 @@ function RoomSlider() {
   return (
     <div>
       <div id="room-slider" className="flex snap-x pb-2 snap-mandatory overflow-x-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-        {EXAMPLES.map(([place, room, lvl, why, src], i) => {
+        {EXAMPLES.map(({ place, room, lvl, tag, why, src }, i) => {
           const r = ROOMS[lvl];
           return (
             <article key={room} className="w-full shrink-0 snap-start">
@@ -553,7 +556,7 @@ function RoomSlider() {
                     {place} · {i + 1} / {EXAMPLES.length}
                   </p>
                   <h4 className="mt-3 text-3xl font-medium leading-tight">{room}</h4>
-                  <span className={`tag mt-4 w-fit text-base font-medium ${r.bg}`}>{r.label}</span>
+                  <span className={`tag mt-4 w-fit text-base font-medium ${r.bg}`}>{tag}</span>
                   <p className="mt-5 text-lg leading-relaxed">{why}</p>
                 </div>
               </div>
